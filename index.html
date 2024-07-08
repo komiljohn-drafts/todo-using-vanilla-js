@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="wrapper">
+      <div class="categories">
+        <h2 class="categories_title">To-Do categories</h2>
+        <ul id="category_list"></ul>
+        <div class="category_add_wrapper">
+          <input type="text" id="category_input" class="category_input" placeholder="Create a new category" />
+          <button onclick="handleCategoryAdd()">Add</button>
+        </div>
+        <p id="category_error_msg"></p>
+      </div>
+      <div class="todos">
+        <div class="main_title_wrapper">
+          <input type="text" class="main_title" disabled />
+          <button class="category_edit_button" onclick="handleCategoryEdit(this)">Edit</button>
+          <button class="category_save_button" onclick="handleCategorySave(this)" hidden>Save</button>
+        </div>
+        <p class="count"></p>
+        <div class="add_block">
+          <input type="text" id="main_input" class="main_input" />
+          <button class="add_btn" onclick="addTodo(this)">
+            <img src="/assets/icons/plus.svg" width="24" height="24" />
+          </button>
+        </div>
+        <p id="todo_error_msg"></p>
+        <ul id="todo_list" class="todo_list"></ul>
+      </div>
+    </main>
+    <script src="/scripts/index.js"></script>
+  </body>
+</html>
